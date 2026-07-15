@@ -1,21 +1,65 @@
 <!DOCTYPE html>
 <html lang="PT-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sonora - Contato</title>
 </head>
+
 <body>
     <div class="barra_de_navegacao">
-        <h1>Sonora</h1> <!-- deixar os botões de navegação no lado direito do título -->
+        <h1>Sonora</h1>
+        <!-- deixar os botões de navegação no lado direito do título -->
         <nav>
             <a href="home.html">Home</a>
-            <a href="sobre_nos.html">Sobre</a>
             <a href="contato.html">Contato</a>
             <a href="catalogo.html">Catálogo</a>
             <a href="faq.html">FAQ</a>
             <a href="entrar.html">Entrar</a>
         </nav>
     </div>
+    <main>
+        <section id="hero">
+            <h1>Fale com a gente</h1>
+            <p>Criamos este espaço para apresentar a musicoterapia de forma simples, visual e acessível, mostrando como a música pode apoiar o foco, o relaxamento e o equilíbrio emocional.</p>
+            <button><a>Explorar playlists</a></button>
+        </section>
+        <div>
+            <form>
+                <h1>Envie sua mensagem</h1>
+                <p>Preencha o formulário abaixo e responderemos assim que possível</p>
+                <label for="nome">Digite seu nome</label>
+                <input type="text" id="nome" name="nome" required>
+                <br>
+                <label for="email">digite seu e-mail</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="assunto">Assunto</label>
+                <input type="text" id="assunto" name="assunto" required>
+                <br>
+                <label for="mensagem">Escreva sua mensagem...</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+                <br>
+                <button type="submit">Enviar mensagem</button>
+            </form>
+        </div>
+    </main>
 </body>
+<footer class="rodape">
+    <div id="sonora_rodape">
+        <h2>Sonora</h2>
+        <p>Musicoterapia para acolher emoções, acalmar a mente e transformar o seu dia.</p>
+    </div>
+    <div id="contato">
+        <h2>Contato</h2>
+        <p>Email: grupopi5turma1g@gmail.com</p>
+    </div>
+    <div id="conta">
+        <h2>Conta</h2>
+        <p><a href="entrar.html">Entrar</a></p>
+        <p><a href="catalogo.html">Minha Playlist</a></p>
+    </div>
+</footer>
+
 </html>
