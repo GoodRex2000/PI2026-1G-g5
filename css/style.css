@@ -1,55 +1,11 @@
-:root {
-    --azul-fundo: #eef7fb;
-    --azul-claro: #dfeff7;
-    --azul: #69aee6;
-    --turquesa: #54c8c3;
-    --turquesa-escuro: #237f83;
-    --lilas: #9579df;
-    --lilas-claro: #eee8ff;
-    --texto: #244056;
-    --texto-suave: #627889;
-    --branco: #ffffff;
-    --borda: #d9e8ef;
-    --spotify: #1ed760;
-    --sombra: 0 18px 50px rgba(68, 105, 129, 0.12);
-    --sombra-card: 0 12px 32px rgba(68, 105, 129, 0.1);
-    --raio: 22px;
-    --raio-grande: 34px;
-    --largura: 1180px;
-}
-
-*,
-*::before,
-*::after {
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 105px;
-}
-
-body {
-    min-height: 100vh;
-    overflow-x: hidden;
-    padding-top: 84px;
-    color: var(--texto);
-    background: #f9fcfd;
-    font-family: Poppins, "Segoe UI", Arial, sans-serif;
-    line-height: 1.65;
-}
-
-body::before {
-    position: fixed;
-    z-index: -1;
-    inset: 0;
-    background:
-        radial-gradient(circle at 5% 15%, rgba(84, 200, 195, 0.09), transparent 28rem),
-        radial-gradient(circle at 95% 55%, rgba(149, 121, 223, 0.08), transparent 30rem);
-    content: "";
-    pointer-events: none;
+    scroll-padding-top: 90px;
 }
 
 img {
@@ -69,218 +25,229 @@ textarea {
 }
 
 button,
-a,
-[role="button"] {
-    -webkit-tap-highlight-color: transparent;
+a {
+    cursor: pointer;
 }
 
-button:focus-visible,
-a:focus-visible,
-input:focus-visible,
-textarea:focus-visible,
-[role="button"]:focus-visible {
-    outline: 3px solid rgba(84, 200, 195, 0.4);
-    outline-offset: 4px;
+
+/* ============ BODY DO SITE E TEXTOS ============ */
+
+body {
+    padding-top: 84px;
+    color: #244056;
+    background: #f9fcfd;
+    font-family: Poppins, "Segoe UI", Arial, sans-serif;
+    line-height: 1.65;
 }
 
 h1,
 h2,
 h3 {
-    color: var(--texto);
-    line-height: 1.15;
-    text-wrap: balance;
+    color: #244056;
+    line-height: 1.2;
 }
 
 h1 {
-    font-size: clamp(2.55rem, 5.5vw, 4.7rem);
-    letter-spacing: -0.045em;
+    font-size: 3rem;
 }
 
 h2 {
-    font-size: clamp(2rem, 4vw, 3.15rem);
-    letter-spacing: -0.035em;
+    font-size: 2.2rem;
 }
 
 h3 {
     font-size: 1.3rem;
-    letter-spacing: -0.015em;
 }
 
 p {
-    color: var(--texto-suave);
+    color: #627889;
 }
+
+.hero,
+.secao {
+    max-width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.secao {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #237f83;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.cabecalho_secao {
+    max-width: 680px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.cabecalho_secao h2 {
+    margin-bottom: 14px;
+}
+
+.cabecalho_secao p {
+    font-size: 1rem;
+}
+
+.cabecalho_secao.alinhado_esquerda {
+    margin-left: 0;
+    text-align: left;
+}
+
+
+/* ============ CABEÇALHO E MENU ============ */
 
 .site_header {
     position: fixed;
-    z-index: 100;
     top: 0;
-    right: 0;
     left: 0;
+    right: 0;
+    z-index: 100;
     height: 84px;
-    border-bottom: 1px solid rgba(217, 232, 239, 0.8);
-    background: rgba(255, 255, 255, 0.92);
-    transition: height 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
-    backdrop-filter: blur(18px);
+    background: #ffffff;
+    border-bottom: 1px solid #d9e8ef;
 }
 
 .site_header.scrolled {
-    height: 74px;
-    background: rgba(255, 255, 255, 0.97);
-    box-shadow: 0 10px 30px rgba(68, 105, 129, 0.09);
+    box-shadow: 0 10px 28px rgba(36, 64, 86, 0.12);
 }
 
 .barra_de_navegacao {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: min(calc(100% - 40px), var(--largura));
     height: 100%;
-    margin-inline: auto;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .marca {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    color: var(--texto);
-    font-size: 1.48rem;
+    color: #244056;
+    font-size: 1.4rem;
     font-weight: 800;
-    letter-spacing: -0.04em;
 }
 
 .marca img {
-    width: 48px;
-    height: 48px;
+    width: 46px;
+    height: 46px;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 5px 15px rgba(35, 127, 131, 0.16);
 }
 
 nav {
     display: flex;
-    align-items: center;
-    gap: 5px;
+    flex-wrap: wrap;
+    gap: 6px;
 }
 
 nav a {
-    position: relative;
     padding: 10px 16px;
     border-radius: 999px;
-    color: #536a7b;
+    color: #627889;
     font-size: 0.92rem;
-    font-weight: 650;
-    transition: color 180ms ease, background-color 180ms ease, transform 180ms ease;
+    font-weight: 600;
 }
 
-nav a:hover {
-    color: var(--turquesa-escuro);
-    background: rgba(84, 200, 195, 0.1);
-    transform: translateY(-1px);
+
+/* ============ BOTÕES ============ */
+
+.botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 48px;
+    padding: 12px 24px;
+    border: 0;
+    border-radius: 999px;
+    font-size: 0.92rem;
+    font-weight: 700;
 }
 
-nav a[aria-current="page"] {
-    color: #fff;
-    background: linear-gradient(135deg, var(--turquesa), var(--turquesa-escuro));
-    box-shadow: 0 8px 20px rgba(35, 127, 131, 0.2);
+.botao_primario {
+    color: #ffffff;
+    background: #237f83;
 }
 
-main {
-    width: 100%;
+.botao_secundario {
+    color: #237f83;
+    background: #ffffff;
+    border: 1px solid #237f83;
 }
 
-main > section,
-main > article {
-    width: min(calc(100% - 40px), var(--largura));
-    margin-inline: auto;
+.link_seta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    color: #237f83;
+    font-weight: 700;
 }
 
-.secao {
-    margin-block: 100px;
-}
 
-.eyebrow {
-    display: inline-block;
-    margin-bottom: 13px;
-    color: var(--turquesa-escuro);
-    font-size: 0.78rem;
-    font-weight: 800;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-}
-
-.cabecalho_secao {
-    max-width: 700px;
-    margin: 0 auto 42px;
-    text-align: center;
-}
-
-.cabecalho_secao h2 {
-    margin-bottom: 15px;
-}
-
-.cabecalho_secao > p {
-    font-size: 1.03rem;
-}
-
-.cabecalho_secao.alinhado_esquerda {
-    margin-inline: 0;
-    text-align: left;
-}
+/* ============ HERO (BANNER DO TOPO DAS PÁGINAS) ============ */
 
 .hero {
     position: relative;
-    min-height: 570px;
-    overflow: hidden;
-    margin-top: 28px;
-    border: 1px solid var(--borda);
-    border-radius: var(--raio-grande);
-    background: var(--azul-fundo);
-    box-shadow: var(--sombra);
-    isolation: isolate;
+    display: flex;
+    align-items: center;
+    min-height: 480px;
+    margin-top: 24px;
+    border: 1px solid #d9e8ef;
+    border-radius: 26px;
+    background: #eef7fb;
 }
 
 .hero_imagem {
     position: absolute;
-    z-index: -2;
-    inset: 0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.hero::after {
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.9) 34%, rgba(255, 255, 255, 0.12) 68%, transparent 100%);
-    content: "";
-    pointer-events: none;
+    border-radius: 26px;
+    z-index: 0;
 }
 
 .hero_conteudo {
-    display: flex;
-    width: min(52%, 590px);
-    min-height: 570px;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding: clamp(38px, 6vw, 72px);
+    position: relative;
+    z-index: 1;
+    width: 52%;
+    margin: 24px;
+    padding: 36px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.92);
 }
 
 .hero_conteudo h1 {
-    margin-bottom: 22px;
+    margin-bottom: 20px;
 }
 
-.hero_conteudo > p {
-    max-width: 570px;
-    margin-bottom: 28px;
-    font-size: clamp(1rem, 1.6vw, 1.16rem);
+.hero_conteudo p {
+    margin-bottom: 26px;
+    font-size: 1.05rem;
 }
 
 .hero_conteudo p strong {
     display: block;
-    margin-bottom: 5px;
-    color: var(--texto);
+    margin-bottom: 4px;
+    color: #244056;
 }
 
 .hero_acoes {
@@ -289,158 +256,51 @@ main > article {
     gap: 12px;
 }
 
-.botao {
-    position: relative;
-    display: inline-flex;
-    min-height: 50px;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    overflow: hidden;
-    padding: 12px 24px;
-    border: 0;
-    border-radius: 999px;
-    cursor: pointer;
-    font-size: 0.92rem;
-    font-weight: 750;
-    transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
-}
 
-.botao_primario {
-    color: #fff;
-    background: linear-gradient(135deg, var(--turquesa), var(--turquesa-escuro));
-    box-shadow: 0 12px 26px rgba(35, 127, 131, 0.22);
-}
-
-.botao_primario:hover {
-    box-shadow: 0 16px 34px rgba(35, 127, 131, 0.3);
-    transform: translateY(-3px);
-}
-
-.botao_secundario {
-    color: var(--turquesa-escuro);
-    border: 1px solid rgba(35, 127, 131, 0.22);
-    background: rgba(255, 255, 255, 0.8);
-}
-
-.botao_secundario:hover {
-    color: #fff;
-    background: var(--turquesa-escuro);
-    transform: translateY(-3px);
-}
-
-.link_seta {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 9px;
-    color: var(--turquesa-escuro);
-    font-weight: 750;
-}
-
-.link_seta span {
-    transition: transform 180ms ease;
-}
-
-.link_seta:hover span {
-    transform: translateX(5px);
-}
+/* ============ HOME: "O QUE É MUSICOTERAPIA" ============ */
 
 .sobre_musicoterapia {
     display: grid;
-    grid-template-columns: 1.02fr 0.98fr;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: clamp(40px, 7vw, 82px);
-}
-
-.imagem_moldura {
-    position: relative;
-    overflow: hidden;
-    border-radius: var(--raio-grande);
-    box-shadow: var(--sombra);
-}
-
-.imagem_moldura::before {
-    position: absolute;
-    z-index: 1;
-    inset: 18px;
-    border: 1px solid rgba(255, 255, 255, 0.65);
-    border-radius: 24px;
-    content: "";
-    pointer-events: none;
+    gap: 50px;
 }
 
 .imagem_moldura img {
     width: 100%;
-    aspect-ratio: 4 / 3;
+    height: 320px;
     object-fit: cover;
-    transition: transform 700ms ease;
-}
-
-.imagem_moldura:hover img {
-    transform: scale(1.035);
+    border-radius: 26px;
+    box-shadow: 0 10px 28px rgba(36, 64, 86, 0.12);
 }
 
 .secao_texto h2 {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .secao_texto p {
     margin-bottom: 14px;
 }
 
-.beneficios_grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-}
+
+/* ============ CARDS ============ */
 
 .beneficio,
 .funcionamento,
 .categoria,
 .playlist,
-.pergunta,
 .formulario_contato,
 .artigo_grid section {
-    position: relative;
-    border: 1px solid var(--borda);
-    background: #fff;
-    box-shadow: var(--sombra-card);
+    border: 1px solid #d9e8ef;
+    background: #ffffff;
+    box-shadow: 0 10px 28px rgba(36, 64, 86, 0.12);
 }
 
 .beneficio,
 .funcionamento {
-    overflow: hidden;
-    padding: 34px;
-    border-radius: var(--raio);
+    padding: 32px;
+    border-radius: 18px;
     text-align: left;
-    transition: transform 220ms ease, box-shadow 220ms ease;
-}
-
-.beneficio::after,
-.funcionamento::after,
-.categoria::after,
-.playlist::after {
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(84, 200, 195, 0.13), transparent 42%);
-    content: "";
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 180ms ease;
-}
-
-.beneficio:hover,
-.funcionamento:hover {
-    box-shadow: 0 20px 42px rgba(68, 105, 129, 0.15);
-    transform: translateY(-7px);
-}
-
-.beneficio:hover::after,
-.funcionamento:hover::after,
-.categoria:hover::after,
-.playlist:hover::after {
-    opacity: 1;
 }
 
 .beneficio h3,
@@ -450,23 +310,23 @@ main > article {
 
 .icone_texto {
     display: grid;
-    width: 58px;
-    height: 58px;
-    margin-bottom: 26px;
     place-items: center;
-    border-radius: 18px;
-    font-size: 2rem;
+    width: 56px;
+    height: 56px;
+    margin-bottom: 22px;
+    border-radius: 16px;
+    font-size: 1.8rem;
     font-weight: 700;
 }
 
 .icone_turquesa {
-    color: var(--turquesa-escuro);
+    color: #237f83;
     background: #e1f7f5;
 }
 
 .icone_lilas {
-    color: var(--lilas);
-    background: var(--lilas-claro);
+    color: #9579df;
+    background: #eee8ff;
 }
 
 .icone_azul {
@@ -474,27 +334,24 @@ main > article {
     background: #e5f2ff;
 }
 
+
+/* ============ "COMO FUNCIONA" ============ */
+
 .passos_grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 18px;
 }
 
 .funcionamento {
-    min-height: 310px;
-    padding-top: 26px;
+    text-align: center;
 }
 
 .funcionamento img {
-    width: 76px;
-    height: 76px;
-    margin: 0 auto 18px;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 16px;
     object-fit: contain;
-}
-
-.funcionamento h3,
-.funcionamento p {
-    text-align: center;
 }
 
 .funcionamento p {
@@ -502,332 +359,270 @@ main > article {
 }
 
 .numero_passo {
-    display: inline-flex;
-    margin-bottom: 5px;
-    color: rgba(35, 127, 131, 0.32);
-    font-size: 0.74rem;
-    font-weight: 850;
-    letter-spacing: 0.12em;
+    display: inline-block;
+    margin-bottom: 6px;
+    color: #54c8c3;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
 }
+
+
+/* ============ CAIXA DE CHAMADA (CTA) ============ */
 
 .cta_duvidas,
 .cta_suporte {
     display: grid;
     grid-template-columns: 1.4fr 0.6fr;
     align-items: center;
-    overflow: hidden;
-    padding: clamp(36px, 6vw, 68px);
-    border: 1px solid #d8ecf0;
-    border-radius: var(--raio-grande);
-    background: linear-gradient(135deg, #eaf9f7 0%, #f1edff 100%);
-    box-shadow: var(--sombra);
+    gap: 24px;
+    padding: 50px;
+    border: 1px solid #d9e8ef;
+    border-radius: 26px;
+    background: #eee8ff;
 }
 
 .cta_duvidas h2,
 .cta_suporte h2 {
-    margin-bottom: 14px;
+    margin-bottom: 12px;
 }
 
 .cta_duvidas p,
 .cta_suporte p {
-    max-width: 630px;
-    margin-bottom: 24px;
+    margin-bottom: 22px;
 }
 
-.cta_duvidas > img,
-.cta_suporte > img {
-    width: min(100%, 270px);
+.cta_duvidas img,
+.cta_suporte img {
+    width: 100%;
+    max-width: 260px;
     justify-self: end;
-    filter: drop-shadow(0 14px 25px rgba(93, 110, 165, 0.14));
 }
+
+
+/* ============ CATÁLOGO: FILTROS ============ */
 
 .filtro_secao {
     display: flex;
-    align-items: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
-    gap: 30px;
-    padding: 34px;
-    border: 1px solid var(--borda);
-    border-radius: var(--raio);
-    background: #fff;
-    box-shadow: var(--sombra-card);
+    gap: 24px;
+    padding: 30px;
+    border: 1px solid #d9e8ef;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 10px 28px rgba(36, 64, 86, 0.12);
 }
 
 .filtro_secao .cabecalho_secao {
-    flex: 0 1 380px;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .filtros {
     display: flex;
-    flex: 1 1 auto;
     flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: 9px;
+    gap: 8px;
 }
 
 .filtro {
-    position: relative;
-    overflow: hidden;
-    min-height: 42px;
-    padding: 8px 17px;
-    border: 1px solid var(--borda);
+    padding: 8px 16px;
+    border: 1px solid #d9e8ef;
     border-radius: 999px;
-    color: var(--texto-suave);
+    color: #627889;
     background: #f8fbfc;
-    cursor: pointer;
     font-size: 0.86rem;
     font-weight: 700;
-    transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
 }
 
-.filtro:hover,
 .filtro.ativo {
-    color: #fff;
-    border-color: transparent;
-    background: var(--turquesa-escuro);
-    transform: translateY(-2px);
+    color: #ffffff;
+    border-color: #237f83;
+    background: #237f83;
 }
+
+
+/* ============ CATÁLOGO: CATEGORIAS ============ */
 
 .categorias_grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 18px;
 }
 
 .categoria {
-    overflow: hidden;
-    min-height: 280px;
-    padding: 30px;
-    border-radius: var(--raio);
-    cursor: pointer;
-    transition: transform 220ms ease, box-shadow 220ms ease;
-}
-
-.categoria:nth-child(1),
-.categoria:nth-child(3) {
-    background: linear-gradient(155deg, #f7fbfc, #e9f6f7);
-}
-
-.categoria:nth-child(2),
-.categoria:nth-child(4) {
-    background: linear-gradient(155deg, #fbf9ff, #f0ebff);
-}
-
-.categoria:hover {
-    box-shadow: 0 20px 45px rgba(68, 105, 129, 0.16);
-    transform: translateY(-8px);
+    padding: 28px;
+    border-radius: 18px;
+    background: #eaf9f8;
 }
 
 .categoria img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 27px;
+    width: 72px;
+    height: 72px;
+    margin-bottom: 22px;
     object-fit: contain;
 }
 
 .categoria h3 {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
 }
 
 .categoria p {
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     font-size: 0.91rem;
 }
 
-.categoria > span {
-    color: var(--turquesa-escuro);
+.categoria span {
+    color: #237f83;
     font-size: 0.85rem;
-    font-weight: 750;
+    font-weight: 700;
 }
+
+
+/* ============ CATÁLOGO: PLAYLISTS ============ */
 
 .playlist_heading {
     display: flex;
-    align-items: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
-    gap: 24px;
-    margin-bottom: 38px;
+    gap: 20px;
+    margin-bottom: 32px;
 }
 
 .playlist_heading .cabecalho_secao {
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .contador_playlists {
-    flex: 0 0 auto;
-    padding: 8px 15px;
+    padding: 8px 14px;
     border-radius: 999px;
-    color: var(--turquesa-escuro);
+    color: #237f83;
     background: #e5f7f5;
     font-size: 0.82rem;
-    font-weight: 750;
+    font-weight: 700;
 }
 
 .playlist_grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 24px;
-    perspective: 1200px;
-}
-
-.playlist {
-    --rotate-x: 0deg;
-    --rotate-y: 0deg;
-    overflow: hidden;
-    border-radius: var(--raio);
-    transform: perspective(900px) rotateX(var(--rotate-x)) rotateY(var(--rotate-y));
-    transform-style: preserve-3d;
-    transition: transform 160ms ease, box-shadow 220ms ease;
-}
-
-.playlist:hover {
-    box-shadow: 0 25px 55px rgba(68, 105, 129, 0.18);
-}
-
-.playlist[hidden] {
-    display: none;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 22px;
 }
 
 .playlist_capa {
     position: relative;
-    overflow: hidden;
-    aspect-ratio: 4 / 3.35;
-}
-
-.playlist_capa::after {
-    position: absolute;
-    inset: 45% 0 0;
-    background: linear-gradient(transparent, rgba(19, 39, 51, 0.32));
-    content: "";
+    height: 200px;
 }
 
 .playlist_capa img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 650ms ease;
-}
-
-.playlist:hover .playlist_capa img {
-    transform: scale(1.045);
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
 }
 
 .playlist_selo {
     position: absolute;
-    z-index: 2;
-    top: 16px;
-    left: 16px;
-    padding: 7px 12px;
-    border: 1px solid rgba(255, 255, 255, 0.55);
+    top: 14px;
+    left: 14px;
+    padding: 6px 12px;
     border-radius: 999px;
-    color: #fff;
-    background: rgba(28, 68, 81, 0.55);
-    backdrop-filter: blur(10px);
+    color: #ffffff;
+    background: rgba(28, 68, 81, 0.75);
     font-size: 0.72rem;
-    font-weight: 750;
+    font-weight: 700;
 }
 
 .playlist_conteudo {
-    position: relative;
-    z-index: 2;
     display: flex;
-    min-height: 240px;
     flex-direction: column;
     align-items: flex-start;
-    padding: 26px;
-    background: #fff;
-    transform: translateZ(16px);
+    padding: 24px;
+    background: #ffffff;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
 }
 
 .playlist_conteudo h3 {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
 }
 
 .playlist_conteudo p {
-    margin-bottom: 22px;
+    margin-bottom: 20px;
     font-size: 0.9rem;
 }
 
 .playlist_link {
-    position: relative;
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    overflow: hidden;
     margin-top: auto;
     padding: 10px 14px;
     border-radius: 999px;
-    color: #fff;
+    color: #ffffff;
     background: #1b2529;
     font-size: 0.82rem;
-    font-weight: 750;
-    transition: transform 180ms ease, background-color 180ms ease;
-}
-
-.playlist_link:hover {
-    background: #090d0f;
-    transform: translateY(-2px);
+    font-weight: 700;
 }
 
 .spotify_ponto {
     width: 9px;
     height: 9px;
     border-radius: 50%;
-    background: var(--spotify);
-    box-shadow: 0 0 0 4px rgba(30, 215, 96, 0.12);
+    background: #1ed760;
 }
 
 .playlist_indisponivel {
-    color: var(--texto-suave);
+    color: #627889;
     background: #edf3f5;
 }
 
 .playlist_vazia {
-    margin-top: 22px;
-    padding: 24px;
-    border: 1px dashed #b8d8dd;
+    margin-top: 20px;
+    padding: 22px;
+    border: 1px dashed #d9e8ef;
     border-radius: 18px;
     text-align: center;
 }
 
-.playlist_vazia[hidden] {
-    display: none;
-}
+
+/* ============ PÁGINA DE CONTATO ============ */
 
 .contato_layout {
     display: grid;
-    grid-template-columns: 0.85fr 1.15fr;
+    grid-template-columns: 1fr 1.2fr;
     align-items: start;
-    gap: clamp(42px, 7vw, 86px);
+    gap: 50px;
 }
 
 .contato_intro h2 {
-    margin-bottom: 18px;
+    margin-bottom: 16px;
 }
 
-.contato_intro > p {
-    margin-bottom: 34px;
+.contato_intro p {
+    margin-bottom: 30px;
 }
 
 .contato_item {
     display: flex;
     align-items: flex-start;
-    gap: 15px;
-    margin-top: 22px;
-    padding-top: 22px;
-    border-top: 1px solid var(--borda);
+    gap: 14px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #d9e8ef;
 }
 
-.contato_item > span {
+.contato_item span {
     display: grid;
-    width: 45px;
-    height: 45px;
-    flex: 0 0 45px;
     place-items: center;
-    border-radius: 14px;
-    color: var(--turquesa-escuro);
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    color: #237f83;
     background: #e5f7f5;
-    font-weight: 850;
+    font-weight: 800;
 }
 
 .contato_item strong,
@@ -837,202 +632,181 @@ main > article {
 }
 
 .contato_item a {
-    color: var(--turquesa-escuro);
+    color: #237f83;
 }
+
+
+/* ============ FORMULÁRIO DE CONTATO ============ */
 
 .formulario_contato {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 18px;
-    padding: clamp(28px, 5vw, 46px);
-    border-radius: var(--raio-grande);
+    gap: 16px;
+    padding: 36px;
+    border-radius: 26px;
 }
 
 .campo {
     display: grid;
-    gap: 7px;
+    gap: 6px;
 }
 
 .campo label {
-    color: var(--texto);
+    color: #244056;
     font-size: 0.84rem;
-    font-weight: 750;
+    font-weight: 700;
 }
 
 .campo input,
 .campo textarea {
     width: 100%;
-    min-height: 50px;
-    padding: 13px 15px;
-    border: 1px solid var(--borda);
-    border-radius: 13px;
-    color: var(--texto);
+    min-height: 48px;
+    padding: 12px 14px;
+    border: 1px solid #d9e8ef;
+    border-radius: 12px;
+    color: #244056;
     background: #f8fbfc;
-    transition: border-color 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
 }
 
 .campo textarea {
-    min-height: 155px;
+    min-height: 150px;
     resize: vertical;
 }
 
-.campo input:focus,
-.campo textarea:focus {
-    border-color: var(--turquesa);
-    background: #fff;
-    box-shadow: 0 0 0 4px rgba(84, 200, 195, 0.12);
-    outline: none;
-}
-
 .mensagem_formulario {
-    padding: 13px 15px;
-    border-radius: 13px;
+    padding: 12px 14px;
+    border-radius: 12px;
     color: #246f5b;
     background: #e5f8f1;
     font-size: 0.88rem;
 }
 
-.mensagem_formulario[hidden] {
-    display: none;
-}
+
+/* ============ FAQ ============ */
 
 .faq_colunas {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 26px;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
 }
 
-.faq_grupo > h3 {
-    margin-bottom: 18px;
-    color: var(--turquesa-escuro);
+.faq_grupo h3 {
+    margin-bottom: 16px;
+    color: #237f83;
 }
 
 .pergunta {
+    margin-bottom: 12px;
+    border: 1px solid #d9e8ef;
+    border-radius: 16px;
     overflow: hidden;
-    margin-bottom: 13px;
-    border-radius: 17px;
-    box-shadow: none;
 }
 
 .pergunta_botao {
     display: flex;
-    width: 100%;
     align-items: center;
     justify-content: space-between;
-    gap: 18px;
-    padding: 21px 22px;
+    gap: 16px;
+    width: 100%;
+    padding: 20px;
     border: 0;
-    color: var(--texto);
-    background: #fff;
-    cursor: pointer;
+    color: #244056;
+    background: #ffffff;
     text-align: left;
-    font-weight: 750;
-}
-
-.pergunta_botao:hover {
-    color: var(--turquesa-escuro);
-    background: #f7fbfc;
+    font-weight: 700;
 }
 
 .pergunta_icone {
     display: grid;
-    width: 30px;
-    height: 30px;
-    flex: 0 0 30px;
     place-items: center;
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
     border-radius: 50%;
-    color: var(--turquesa-escuro);
+    color: #237f83;
     background: #e5f7f5;
     font-size: 1.1rem;
 }
 
 .resposta {
-    padding: 0 22px 22px;
-    background: #fff;
+    padding: 0 20px 20px;
+    background: #ffffff;
 }
 
 .resposta p {
     font-size: 0.92rem;
 }
 
-.resposta[hidden] {
-    display: none;
-}
+
+/* ============ PÁGINA "O QUE É MUSICOTERAPIA" ============ */
 
 .artigo_informacional {
-    max-width: 980px;
+    max-width: 960px;
 }
 
 .artigo_intro {
     max-width: 800px;
-    margin-bottom: 42px;
+    margin-bottom: 40px;
 }
 
 .artigo_intro h2 {
-    margin-bottom: 18px;
+    margin-bottom: 16px;
 }
 
 .destaque_texto {
-    font-size: 1.2rem;
-    line-height: 1.75;
+    font-size: 1.15rem;
+    line-height: 1.7;
 }
 
 .artigo_grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
 .artigo_grid section {
-    padding: 28px;
-    border-radius: var(--raio);
-    box-shadow: none;
+    padding: 26px;
+    border-radius: 18px;
 }
 
 .artigo_grid h3 {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .nota_fontes {
-    margin-top: 26px;
-    padding: 30px;
-    border-left: 5px solid var(--turquesa);
-    border-radius: 0 var(--raio) var(--raio) 0;
+    margin-top: 24px;
+    padding: 28px;
+    border-left: 5px solid #54c8c3;
+    border-radius: 0 18px 18px 0;
     background: #edf9f8;
 }
 
-.nota_fontes > strong {
-    color: var(--turquesa-escuro);
+.nota_fontes strong {
+    color: #237f83;
 }
 
 .nota_fontes p {
-    margin-top: 9px;
+    margin-top: 8px;
 }
 
-.hero_informacional .hero_imagem {
-    object-position: 62% center;
-}
 
-.hero_informacional::after {
-    background: linear-gradient(90deg, rgba(236, 246, 250, 0.99) 0%, rgba(236, 246, 250, 0.92) 36%, rgba(236, 246, 250, 0.22) 69%, transparent 100%);
-}
+/* ============ RODAPÉ ============ */
 
 .rodape {
-    margin-top: 110px;
-    color: #fff;
+    margin-top: 100px;
+    color: #ffffff;
     background: #244b5c;
 }
 
 .rodape_conteudo {
     display: grid;
-    grid-template-columns: 1.5fr 0.7fr 1fr 110px;
-    gap: 42px;
-    width: min(calc(100% - 40px), var(--largura));
-    margin-inline: auto;
-    padding-block: 58px 42px;
+    grid-template-columns: 1.5fr 0.8fr 1fr 110px;
+    gap: 36px;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 56px 20px 40px;
 }
 
-.rodape_conteudo > div:not(.rodape_marca) {
+.rodape_conteudo div {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1040,286 +814,46 @@ main > article {
 }
 
 .rodape h2 {
-    margin-bottom: 7px;
-    color: #fff;
+    margin-bottom: 6px;
+    color: #ffffff;
     font-size: 1rem;
 }
 
 .marca_rodape {
-    margin-bottom: 14px;
-    color: #fff;
-}
-
-.marca_rodape img {
-    border: 2px solid rgba(255, 255, 255, 0.45);
+    margin-bottom: 12px;
+    color: #ffffff;
 }
 
 .rodape p,
-.rodape a:not(.marca) {
+.rodape_conteudo a {
     color: rgba(255, 255, 255, 0.72);
     font-size: 0.86rem;
 }
 
-.rodape a:not(.marca):hover {
-    color: #fff;
+a.marca_rodape {
+    color: #ffffff;
 }
 
 .rodape_marca p {
-    max-width: 390px;
+    max-width: 380px;
 }
 
 .logo_ifc {
-    width: 86px;
-    height: 100px;
-    align-self: start;
-    justify-self: end;
+    width: 60px;
+    height: 72px;
     object-fit: contain;
-    filter: brightness(0) invert(1);
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    justify-self: end;
 }
 
 .rodape_base {
-    width: min(calc(100% - 40px), var(--largura));
-    margin-inline: auto;
-    padding-block: 18px 24px;
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 18px 20px 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
     text-align: center;
-}
-
-.js .reveal {
-    opacity: 0;
-    scale: 0.985;
-    translate: 0 28px;
-    transition: opacity 620ms ease, scale 620ms ease, translate 620ms ease;
-    transition-delay: var(--reveal-delay, 0ms);
-}
-
-.js .reveal.is_visible {
-    opacity: 1;
-    scale: 1;
-    translate: 0 0;
-}
-
-.ripple {
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.42);
-    pointer-events: none;
-    transform: translate(-50%, -50%) scale(0);
-    animation: ripple 620ms ease-out forwards;
-}
-
-@keyframes ripple {
-    to {
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(1);
-    }
-}
-
-@media (max-width: 1020px) {
-    .passos_grid,
-    .categorias_grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .playlist_grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .rodape_conteudo {
-        grid-template-columns: 1.4fr 0.8fr 1fr;
-    }
-
-    .logo_ifc {
-        display: none;
-    }
-}
-
-@media (max-width: 780px) {
-    body {
-        padding-top: 74px;
-    }
-
-    .site_header,
-    .site_header.scrolled {
-        height: 74px;
-    }
-
-    .barra_de_navegacao {
-        width: min(calc(100% - 22px), var(--largura));
-    }
-
-    .marca {
-        gap: 7px;
-        font-size: 1.2rem;
-    }
-
-    .marca img {
-        width: 40px;
-        height: 40px;
-    }
-
-    nav {
-        max-width: 69vw;
-        overflow-x: auto;
-        scrollbar-width: none;
-    }
-
-    nav::-webkit-scrollbar {
-        display: none;
-    }
-
-    nav a {
-        flex: 0 0 auto;
-        padding: 8px 11px;
-        font-size: 0.78rem;
-    }
-
-    main > section,
-    main > article {
-        width: min(calc(100% - 24px), var(--largura));
-    }
-
-    .secao {
-        margin-block: 72px;
-    }
-
-    .hero,
-    .hero_conteudo {
-        min-height: 600px;
-    }
-
-    .hero_conteudo {
-        width: 72%;
-        padding: 34px 25px;
-    }
-
-    .hero::after {
-        background: linear-gradient(90deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.88) 54%, rgba(255, 255, 255, 0.2) 100%);
-    }
-
-    .hero_imagem {
-        object-position: 64% center;
-    }
-
-    .sobre_musicoterapia,
-    .contato_layout,
-    .faq_colunas {
-        grid-template-columns: 1fr;
-    }
-
-    .beneficios_grid {
-        grid-template-columns: 1fr;
-    }
-
-    .beneficio {
-        min-height: 235px;
-    }
-
-    .filtro_secao {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .filtros {
-        justify-content: flex-start;
-    }
-
-    .cta_duvidas,
-    .cta_suporte {
-        grid-template-columns: 1fr 190px;
-    }
-
-    .rodape_conteudo {
-        grid-template-columns: 1.4fr 0.8fr;
-    }
-}
-
-@media (max-width: 560px) {
-    h1 {
-        font-size: clamp(2.25rem, 12vw, 3.25rem);
-    }
-
-    h2 {
-        font-size: clamp(1.8rem, 9vw, 2.5rem);
-    }
-
-    .hero,
-    .hero_conteudo {
-        min-height: 620px;
-    }
-
-    .hero_conteudo {
-        width: 100%;
-        justify-content: flex-end;
-        padding-bottom: 48px;
-    }
-
-    .hero::after,
-    .hero_informacional::after {
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0.99) 0%, rgba(255, 255, 255, 0.92) 47%, rgba(255, 255, 255, 0.1) 84%);
-    }
-
-    .hero_imagem,
-    .hero_informacional .hero_imagem {
-        object-position: 68% top;
-    }
-
-    .hero_acoes,
-    .hero_acoes .botao {
-        width: 100%;
-    }
-
-    .passos_grid,
-    .categorias_grid,
-    .playlist_grid,
-    .artigo_grid {
-        grid-template-columns: 1fr;
-    }
-
-    .funcionamento {
-        min-height: 270px;
-    }
-
-    .cta_duvidas,
-    .cta_suporte {
-        grid-template-columns: 1fr;
-    }
-
-    .cta_duvidas > img,
-    .cta_suporte > img {
-        width: 170px;
-        margin-top: 22px;
-        justify-self: center;
-    }
-
-    .playlist_heading {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .rodape_conteudo {
-        grid-template-columns: 1fr;
-        gap: 28px;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
-
-    *,
-    *::before,
-    *::after {
-        scroll-behavior: auto !important;
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-
-    .js .reveal {
-        opacity: 1;
-        scale: 1;
-        translate: 0 0;
-    }
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.86rem;
 }
