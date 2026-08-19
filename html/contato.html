@@ -1,60 +1,111 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com a equipe do projeto Sonora.">
     <title>Sonora - Contato</title>
-    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js" defer></script>
 </head>
 
-<body>
-    <header>
-    <div class="barra_de_navegacao">
-        <h1>Sonora</h1> <!-- deixar os botões de navegação no lado direito do título -->
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="html/contato.html">Contato</a>
-            <a href="html/catalogo.html">Catálogo</a>
-            <a href="html/faq.html">FAQ</a>
-        </nav>
-    </div>
-    </header>
-    <main>
-        <section id="hero">
-            <h1>Fale com a gente</h1>
-            <p>Criamos este espaço para apresentar a musicoterapia de forma simples, visual e acessível, mostrando como a música pode apoiar o foco, o relaxamento e o equilíbrio emocional.</p>
-            <button><a href="html/catalogo.html">Explorar playlists</a></button>
-        </section>
-        <div>
-            <form>
-                <h1>Envie sua mensagem</h1>
-                <p>Preencha o formulário abaixo e responderemos assim que possível</p>
-                <label for="nome">Digite seu nome</label>
-                <input type="text" id="nome" name="nome" required>
-                <br>
-                <label for="email">digite seu e-mail</label>
-                <input type="email" id="email" name="email" required>
-                <br>
-                <label for="assunto">Assunto</label>
-                <input type="text" id="assunto" name="assunto" required>
-                <br>
-                <label for="mensagem">Escreva sua mensagem...</label>
-                <textarea id="mensagem" name="mensagem" required></textarea>
-                <br>
-                <button type="submit">Enviar mensagem</button>
-            </form>
+<body data-page="contato">
+    <header class="site_header">
+        <div class="barra_de_navegacao">
+            <a class="marca" href="../index.html" aria-label="Sonora - página inicial">
+                <img src="../assets/imagens/01_logo_sonora.png" alt="" width="52" height="52">
+                <span>Sonora</span>
+            </a>
+            <nav aria-label="Navegação principal">
+                <a href="../index.html">Home</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contato.html">Contato</a>
+            </nav>
         </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero hero_interno hero_contato">
+            <img class="hero_imagem" src="../assets/imagens/11_banner_contato_bateria.png" alt="Pessoa tocando bateria" fetchpriority="high">
+            <div class="hero_conteudo">
+                <span class="eyebrow">Vamos conversar</span>
+                <h1>Fale com a gente</h1>
+                <p>Criamos este espaço para apresentar a musicoterapia de forma simples, visual e acessível.</p>
+                <a class="botao botao_primario" href="#formulario_contato">Enviar mensagem</a>
+            </div>
+        </section>
+
+        <section class="secao contato_layout" aria-labelledby="titulo_formulario">
+            <div class="contato_intro">
+                <span class="eyebrow">Entre em contato</span>
+                <h2 id="titulo_formulario">Queremos ouvir você</h2>
+                <p>Envie dúvidas, comentários ou sugestões de músicas. Nossa equipe responderá assim que possível.</p>
+                <div class="contato_item">
+                    <span aria-hidden="true">@</span>
+                    <div>
+                        <strong>E-mail</strong>
+                        <a href="mailto:grupopi5turma1g@gmail.com">grupopi5turma1g@gmail.com</a>
+                    </div>
+                </div>
+                <div class="contato_item">
+                    <span aria-hidden="true">♪</span>
+                    <div>
+                        <strong>Sugira uma música</strong>
+                        <p>Conte qual faixa combina com a proposta da Sonora.</p>
+                    </div>
+                </div>
+            </div>
+
+            <form id="formulario_contato" class="formulario_contato">
+                <div class="campo campo_largo">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" autocomplete="name" placeholder="Digite seu nome" required>
+                </div>
+                <div class="campo campo_largo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" autocomplete="email" placeholder="voce@exemplo.com" required>
+                </div>
+                <div class="campo campo_largo">
+                    <label for="assunto">Assunto</label>
+                    <input type="text" id="assunto" name="assunto" placeholder="Como podemos ajudar?" required>
+                </div>
+                <div class="campo campo_largo">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem..." required></textarea>
+                </div>
+                <button class="botao botao_primario campo_largo" type="submit">Enviar mensagem <span aria-hidden="true">→</span></button>
+                <p class="mensagem_formulario campo_largo" role="status" aria-live="polite" hidden>Mensagem preparada! Como este é um protótipo acadêmico, nenhum dado foi enviado.</p>
+            </form>
+        </section>
     </main>
-<footer class="rodape">
-    <div id="sonora_rodape">
-        <h2>Sonora</h2>
-        <p>Musicoterapia para acolher emoções, acalmar a mente e transformar o seu dia.</p>
-    </div>
-    <div id="contato">
-        <h2>Contato</h2>
-        <p>Email: grupopi5turma1g@gmail.com</p>
-    </div>
-</footer>
+
+    <footer class="rodape">
+        <div class="rodape_conteudo">
+            <div class="rodape_marca">
+                <a class="marca marca_rodape" href="../index.html">
+                    <img src="../assets/imagens/01_logo_sonora.png" alt="" width="54" height="54" loading="lazy">
+                    <span>Sonora</span>
+                </a>
+                <p>Musicoterapia para acolher emoções, acalmar a mente e transformar o seu dia.</p>
+            </div>
+            <div>
+                <h2>Navegação</h2>
+                <a href="../index.html">Home</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contato.html">Contato</a>
+            </div>
+            <div>
+                <h2>Contato</h2>
+                <a href="mailto:grupopi5turma1g@gmail.com">grupopi5turma1g@gmail.com</a>
+                <p>Projeto Integrador — Grupo 5</p>
+            </div>
+            <img class="logo_ifc" src="../assets/imagens/03_logo_ifc_campus_concordia.png" alt="Instituto Federal Catarinense - Campus Concórdia" loading="lazy">
+        </div>
+        <p class="rodape_base">© 2026 Sonora. Conteúdo educacional.</p>
+    </footer>
 </body>
+
 </html>

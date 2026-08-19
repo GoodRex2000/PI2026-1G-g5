@@ -1,78 +1,134 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Perguntas frequentes sobre o projeto Sonora e suas playlists.">
     <title>Sonora - Perguntas Frequentes</title>
-    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js" defer></script>
 </head>
 
-<body>
-    <header>
-    <div class="barra_de_navegacao">
-        <h1>Sonora</h1> <!-- deixar os botões de navegação no lado direito do título -->
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="html/contato.html">Contato</a>
-            <a href="html/catalogo.html">Catálogo</a>
-            <a href="html/faq.html">FAQ</a>
-        </nav>
-    </div>
+<body data-page="faq">
+    <header class="site_header">
+        <div class="barra_de_navegacao">
+            <a class="marca" href="../index.html" aria-label="Sonora - página inicial">
+                <img src="../assets/imagens/01_logo_sonora.png" alt="" width="52" height="52">
+                <span>Sonora</span>
+            </a>
+            <nav aria-label="Navegação principal">
+                <a href="../index.html">Home</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
     </header>
+
     <main>
-        <section id="hero">
-            <h1>Perguntas Frequentes</h1>
-            <p>Tire suas dúvidas sobre o site, as playlists e o uso da plataforma.</p>
-            <button><a href="html/contato.html">Entre em contato</a></button>
-            <button><a href="#perguntas">Ver perguntas</a></button>
+        <section id="hero" class="hero hero_interno hero_faq">
+            <img class="hero_imagem" src="../assets/imagens/24_banner_faq.png" alt="Fones de ouvido e balões de conversa sobre música" fetchpriority="high">
+            <div class="hero_conteudo">
+                <span class="eyebrow">Informação simples</span>
+                <h1>Perguntas frequentes</h1>
+                <p>Tire suas dúvidas sobre o site, as playlists e o uso da plataforma.</p>
+                <div class="hero_acoes">
+                    <a class="botao botao_primario" href="#perguntas">Ver perguntas</a>
+                    <a class="botao botao_secundario" href="contato.html">Entre em contato</a>
+                </div>
+            </div>
         </section>
-        <div class="perguntas_sobre_o_site">
-            <h2>Sobre o site</h2>
-            <div class="pergunta">
-                <h3>O site é gratuito? </h3>
-                <p>Sim, o site é gratuito e pode ser acessado por qualquer pessoa.</p>
+
+        <section id="perguntas" class="secao faq_secao" aria-labelledby="titulo_faq">
+            <div class="cabecalho_secao">
+                <span class="eyebrow">Dúvidas comuns</span>
+                <h2 id="titulo_faq">Como podemos ajudar?</h2>
+                <p>Selecione uma pergunta para visualizar a resposta.</p>
             </div>
-            <div class="pergunta">
-                <h3>As playlists substituem a terapia?</h3>
-                <p>Não, as playlists são uma ferramenta complementar à musicoterapia e não substituem o trabalho de um profissional qualificado.</p>
+
+            <div class="faq_colunas">
+                <div class="faq_grupo">
+                    <h3>Sobre o site</h3>
+                    <article class="pergunta">
+                        <button class="pergunta_botao" type="button" aria-expanded="true">
+                            <span>O site é gratuito?</span><span class="pergunta_icone" aria-hidden="true">−</span>
+                        </button>
+                        <div class="resposta"><p>Sim. O site é gratuito e pode ser acessado por qualquer pessoa.</p></div>
+                    </article>
+                    <article class="pergunta">
+                        <button class="pergunta_botao" type="button" aria-expanded="false">
+                            <span>As playlists substituem a terapia?</span><span class="pergunta_icone" aria-hidden="true">+</span>
+                        </button>
+                        <div class="resposta" hidden><p>Não. As playlists são um recurso complementar e não substituem o acompanhamento de um profissional qualificado.</p></div>
+                    </article>
+                    <article class="pergunta">
+                        <button class="pergunta_botao" type="button" aria-expanded="false">
+                            <span>Como a Sonora funciona?</span><span class="pergunta_icone" aria-hidden="true">+</span>
+                        </button>
+                        <div class="resposta" hidden><p>A Sonora organiza playlists por objetivos como foco, relaxamento, sono e bem-estar para facilitar sua escolha.</p></div>
+                    </article>
+                </div>
+
+                <div class="faq_grupo">
+                    <h3>Sobre as playlists</h3>
+                    <article class="pergunta">
+                        <button class="pergunta_botao" type="button" aria-expanded="false">
+                            <span>Como encontro playlists para foco?</span><span class="pergunta_icone" aria-hidden="true">+</span>
+                        </button>
+                        <div class="resposta" hidden><p>Acesse o catálogo e selecione o filtro “Foco”. Você verá todas as playlists disponíveis para essa finalidade.</p></div>
+                    </article>
+                    <article class="pergunta">
+                        <button class="pergunta_botao" type="button" aria-expanded="false">
+                            <span>Posso sugerir músicas?</span><span class="pergunta_icone" aria-hidden="true">+</span>
+                        </button>
+                        <div class="resposta" hidden><p>Sim. Envie sua sugestão pelo formulário da página de contato.</p></div>
+                    </article>
+                    <article class="pergunta">
+                        <button class="pergunta_botao" type="button" aria-expanded="false">
+                            <span>As playlists são atualizadas?</span><span class="pergunta_icone" aria-hidden="true">+</span>
+                        </button>
+                        <div class="resposta" hidden><p>A proposta é atualizar as seleções conforme novas músicas e categorias forem incorporadas ao projeto.</p></div>
+                    </article>
+                </div>
             </div>
-            <div class="pergunta">
-                <h3>Como o sonora funciona?</h3>
-                <p>O Sonora funciona como uma plataforma de musicoterapia que oferece playlists personalizadas para diferentes objetivos, como foco, relaxamento e bem-estar.</p>
+        </section>
+
+        <section class="secao cta_suporte">
+            <div>
+                <span class="eyebrow">Precisa de mais ajuda?</span>
+                <h2>Estamos aqui para você</h2>
+                <p>Se a sua dúvida não apareceu acima, fale com a nossa equipe pelo formulário de contato.</p>
+                <a class="botao botao_primario" href="contato.html">Falar com a equipe <span aria-hidden="true">→</span></a>
             </div>
-        </div>
-        <div class="perguntas_sobre_as_playlists">
-            <h2>Sobre as playlists</h2>
-            <div class="pergunta">
-                <h3>Como encontro playlists para foco?</h3>
-                <p>Acesse a categoria “Foco e concentração” ou use os filtros por objetivo. Também recomendamos nossas playlists populares nessa finalidade.</p>
-            </div>
-            <div class="pergunta">
-                <h3>Posso sugerir músicas para as playlists?</h3>
-                <p>Sim, você pode enviar sugestões de músicas através do formulário de contato.</p>
-            </div>
-            <div class="pergunta">
-                <h3>As playlists são atualizadas regularmente?</h3>
-                <p>Sim, mantemos nossas playlists atualizadas com novas músicas e categorias para oferecer a melhor experiência possível.</p>
-            </div>
-        </div>
-        <div class="help">
-            <h2>Precisa de ajuda?</h2>
-            <p>Estamos aqui para te ajudar!</p>
-            <p>Fale com nossa equipe e responderemos o mais rápido possível.</p>
-            <button><a href="contato.html">Entre em contato</a></button>
-        </div>
+            <img src="../assets/imagens/23_ilustracao_suporte_faq.png" alt="Headset com balões de conversa" loading="lazy">
+        </section>
     </main>
+
     <footer class="rodape">
-        <div id="sonora_rodape">
-            <h2>Sonora</h2>
-            <p>Musicoterapia para acolher emoções, acalmar a mente e transformar o seu dia.</p>
+        <div class="rodape_conteudo">
+            <div class="rodape_marca">
+                <a class="marca marca_rodape" href="../index.html">
+                    <img src="../assets/imagens/01_logo_sonora.png" alt="" width="54" height="54" loading="lazy">
+                    <span>Sonora</span>
+                </a>
+                <p>Musicoterapia para acolher emoções, acalmar a mente e transformar o seu dia.</p>
+            </div>
+            <div>
+                <h2>Navegação</h2>
+                <a href="../index.html">Home</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contato.html">Contato</a>
+            </div>
+            <div>
+                <h2>Contato</h2>
+                <a href="mailto:grupopi5turma1g@gmail.com">grupopi5turma1g@gmail.com</a>
+                <p>Projeto Integrador — Grupo 5</p>
+            </div>
+            <img class="logo_ifc" src="../assets/imagens/03_logo_ifc_campus_concordia.png" alt="Instituto Federal Catarinense - Campus Concórdia" loading="lazy">
         </div>
-        <div id="contato">
-            <h2>Contato</h2>
-            <p>Email: grupopi5turma1g@gmail.com</p>
-        </div>
+        <p class="rodape_base">© 2026 Sonora. Conteúdo educacional.</p>
     </footer>
 </body>
 

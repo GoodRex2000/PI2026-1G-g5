@@ -1,88 +1,150 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sonora: música para foco, emoções e bem-estar.">
     <title>Sonora - Home</title>
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
 </head>
-<body>
-    <header>
-    <div class="barra_de_navegacao">
-        <h1>Sonora</h1> <!-- deixar os botões de navegação no lado direito do título -->
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="html/contato.html">Contato</a>
-            <a href="html/catalogo.html">Catálogo</a>
-            <a href="html/faq.html">FAQ</a>
-        </nav>
-    </div>
+
+<body data-page="home">
+    <header class="site_header">
+        <div class="barra_de_navegacao">
+            <a class="marca" href="index.html" aria-label="Sonora - página inicial">
+                <img src="assets/imagens/01_logo_sonora.png" alt="" width="52" height="52">
+                <span>Sonora</span>
+            </a>
+            <nav aria-label="Navegação principal">
+                <a href="index.html">Home</a>
+                <a href="html/catalogo.html">Catálogo</a>
+                <a href="html/faq.html">FAQ</a>
+                <a href="html/contato.html">Contato</a>
+            </nav>
+        </div>
     </header>
+
     <main>
-    <section id="hero"><!-- colocar a imagem de fundo, texto alinhado a esquerda, e uma imagem a direita -->
-        <h1>Musicoterapia para<br>foco,emoções e <br>bem-estar.</h1>
-        <p><strong>Sons que acolhem, playlists que transformam.<br></strong> 
-        Descubra como a música pode transformar sua vida,<br> ajudando a
-        equilibrar suas emoções e trazer vida para seus dias.</p>
-        <button><a href="html/catalogo.html">Explorar playlists</a></button>
-    <br>
-    </section>
-    <section id="O que é a musicoterapia?">
-        <div>
-        <h2>O que é a musicoterapia?</h2>
-        <p>A musicoterapia é uma prática da
-        área da saúde que utiliza a música e seus elementos
-        de som, ritmo e melodia como ferramenta terapêutica.</p><br>
-        <button><a href="html/musicoterapia_informacional.html">Saiba mais</a></button>
-        </div>
-    </section>
-    <section id="beneficios"><!-- alinhar os cards lado a lado -->
-        <h2>Benefícios da musicoterapia</h2>
-        <div class="beneficio">
-            <h3>Redução do estresse</h3>
-            <p>A música pode ajudar a reduzir os níveis de estresse e ansiedade, 
-            promovendo relaxamento e bem-estar.</p>
-        </div>
-        <div class="beneficio">
-            <h3>Melhora do humor</h3>
-            <p>A música pode influenciar positivamente o humor, 
-            ajudando a combater a depressão e a tristeza.</p>
-        </div>
-        <div class="beneficio">
-            <h3>Estimulação cognitiva</h3>
-            <p>A música pode estimular a memória, a atenção e outras funções cognitivas,
-            sendo útil em processos de reabilitação.</p>
-        </div>
-    </section>
-    <section id="como_funciona">
-        <div class="funcionamento">
-        <h2>Como funciona a Sonora?</h2>
-            <h3>1 - Escolha seu objetivo</h3>
-            <p>Foco, relaxamento, sono, emoções ou meditação.</p>
-        </div>
-        <div class="funcionamento">
-            <h3>2 - Encontre sua playlist</h3>
-            <p>Veja músicas selecionadas para o seu momento.</p>
-        </div>
-        <div class="funcionamento">
-            <h3>3 - Ouça com atenção</h3>
-            <p>Reserve alguns minutos para se conectar com o som.</p>
-        </div>
-        <div class="funcionamento">
-            <h3>4 - Perceba como se sente</h3>
-            <p>Observe suas emoções antes e depois da escuta.</p>
-        </div>
-    </section>
+        <section id="hero" class="hero hero_home">
+            <img class="hero_imagem" src="assets/imagens/09_banner_home.png" alt="Mulher ouvindo música com fones de ouvido" fetchpriority="high">
+            <div class="hero_conteudo">
+                <span class="eyebrow">Sinta. Respire. Escute.</span>
+                <h1>Musicoterapia para foco, emoções e bem-estar.</h1>
+                <p><strong>Sons que acolhem, playlists que transformam.</strong> Descubra como a música pode equilibrar suas emoções e trazer mais leveza para os seus dias.</p>
+                <a class="botao botao_primario" href="html/catalogo.html">Explorar playlists <span aria-hidden="true">→</span></a>
+            </div>
+        </section>
+
+        <section class="secao sobre_musicoterapia" aria-labelledby="titulo_musicoterapia">
+            <div class="imagem_moldura">
+                <img src="assets/imagens/02_homem_piano.png" alt="Homem tocando piano em um ambiente tranquilo" loading="lazy">
+            </div>
+            <div class="secao_texto">
+                <span class="eyebrow">Música que cuida</span>
+                <h2 id="titulo_musicoterapia">O que é a musicoterapia?</h2>
+                <p>A musicoterapia é uma prática da área da saúde que utiliza a música e seus elementos — som, ritmo e melodia — como ferramentas terapêuticas.</p>
+                <p>Ela pode apoiar a expressão emocional, a comunicação, o relaxamento e diferentes processos de desenvolvimento.</p>
+                <a class="link_seta" href="html/musicoterapia_informacional.html">Saiba mais sobre a prática <span aria-hidden="true">→</span></a>
+            </div>
+        </section>
+
+        <section id="beneficios" class="secao secao_centralizada" aria-labelledby="titulo_beneficios">
+            <div class="cabecalho_secao">
+                <span class="eyebrow">Bem-estar através do som</span>
+                <h2 id="titulo_beneficios">Benefícios da musicoterapia</h2>
+                <p>A música pode acompanhar diferentes necessidades e momentos da sua rotina.</p>
+            </div>
+            <div class="beneficios_grid">
+                <article class="beneficio">
+                    <span class="icone_texto icone_turquesa" aria-hidden="true">≈</span>
+                    <h3>Redução do estresse</h3>
+                    <p>A escuta atenta pode ajudar a reduzir a tensão e favorecer uma sensação de calma.</p>
+                </article>
+                <article class="beneficio">
+                    <span class="icone_texto icone_lilas" aria-hidden="true">♡</span>
+                    <h3>Melhora do humor</h3>
+                    <p>A música pode influenciar positivamente o humor e acolher emoções difíceis.</p>
+                </article>
+                <article class="beneficio">
+                    <span class="icone_texto icone_azul" aria-hidden="true">◎</span>
+                    <h3>Estimulação cognitiva</h3>
+                    <p>Ritmo e melodia podem estimular memória, atenção e outras funções cognitivas.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="como_funciona" class="secao secao_centralizada" aria-labelledby="titulo_como_funciona">
+            <div class="cabecalho_secao">
+                <span class="eyebrow">Uma experiência simples</span>
+                <h2 id="titulo_como_funciona">Como funciona a Sonora?</h2>
+                <p>Quatro passos para encontrar uma trilha que combine com o seu momento.</p>
+            </div>
+            <div class="passos_grid">
+                <article class="funcionamento">
+                    <span class="numero_passo">01</span>
+                    <img src="assets/imagens/06_icone_escolha_objetivo.png" alt="" loading="lazy">
+                    <h3>Escolha seu objetivo</h3>
+                    <p>Foco, relaxamento, sono, emoções ou meditação.</p>
+                </article>
+                <article class="funcionamento">
+                    <span class="numero_passo">02</span>
+                    <img src="assets/imagens/04_icone_encontre_playlist.png" alt="" loading="lazy">
+                    <h3>Encontre sua playlist</h3>
+                    <p>Veja músicas selecionadas para o seu momento.</p>
+                </article>
+                <article class="funcionamento">
+                    <span class="numero_passo">03</span>
+                    <img src="assets/imagens/05_icone_ouca_com_atencao.png" alt="" loading="lazy">
+                    <h3>Ouça com atenção</h3>
+                    <p>Reserve alguns minutos para se conectar com o som.</p>
+                </article>
+                <article class="funcionamento">
+                    <span class="numero_passo">04</span>
+                    <img src="assets/imagens/07_icone_perceba_como_se_sente.png" alt="" loading="lazy">
+                    <h3>Perceba como se sente</h3>
+                    <p>Observe suas emoções antes e depois da escuta.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="secao cta_duvidas">
+            <div>
+                <span class="eyebrow">Estamos aqui para ajudar</span>
+                <h2>Ficou com alguma dúvida?</h2>
+                <p>Conheça as perguntas mais frequentes sobre o projeto, as playlists e a musicoterapia.</p>
+                <a class="botao botao_primario" href="html/faq.html">Acessar o FAQ <span aria-hidden="true">→</span></a>
+            </div>
+            <img src="assets/imagens/10_ilustracao_duvidas_musica.png" alt="Balões de conversa sobre música" loading="lazy">
+        </section>
     </main>
+
     <footer class="rodape">
-        <div id="sonora_rodape">
-            <h2>Sonora</h2>
-            <p>Musicoterapia para acolher emoções, acalmar a mente e transformar o seu dia.</p>
+        <div class="rodape_conteudo">
+            <div class="rodape_marca">
+                <a class="marca marca_rodape" href="index.html">
+                    <img src="assets/imagens/01_logo_sonora.png" alt="" width="54" height="54" loading="lazy">
+                    <span>Sonora</span>
+                </a>
+                <p>Musicoterapia para acolher emoções, acalmar a mente e transformar o seu dia.</p>
+            </div>
+            <div>
+                <h2>Navegação</h2>
+                <a href="index.html">Home</a>
+                <a href="html/catalogo.html">Catálogo</a>
+                <a href="html/faq.html">FAQ</a>
+                <a href="html/contato.html">Contato</a>
+            </div>
+            <div>
+                <h2>Contato</h2>
+                <a href="mailto:grupopi5turma1g@gmail.com">grupopi5turma1g@gmail.com</a>
+                <p>Projeto Integrador — Grupo 5</p>
+            </div>
+            <img class="logo_ifc" src="assets/imagens/03_logo_ifc_campus_concordia.png" alt="Instituto Federal Catarinense - Campus Concórdia" loading="lazy">
         </div>
-        <div id="contato">
-            <h2>Contato</h2>
-            <p>Email: grupopi5turma1g@gmail.com</p>
-        </div>
+        <p class="rodape_base">© 2026 Sonora. Conteúdo educacional.</p>
     </footer>
 </body>
+
 </html>

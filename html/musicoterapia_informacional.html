@@ -1,61 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sonora - Informacional</title>
-    <script src="js/script.js" defer></script>
+    <meta name="description" content="Informações introdutórias sobre musicoterapia.">
+    <title>Sonora - O que é musicoterapia?</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js" defer></script>
 </head>
-<body>
-    <header>
-    <div class="barra_de_navegacao">
-        <h1>Sonora</h1> <!-- deixar os botões de navegação no lado direito do título -->
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="html/contato.html">Contato</a>
-            <a href="html/catalogo.html">Catálogo</a>
-            <a href="html/faq.html">FAQ</a>
-        </nav>
-    </div>
+
+<body data-page="informacional">
+    <header class="site_header">
+        <div class="barra_de_navegacao">
+            <a class="marca" href="../index.html" aria-label="Sonora - página inicial">
+                <img src="../assets/imagens/01_logo_sonora.png" alt="" width="52" height="52">
+                <span>Sonora</span>
+            </a>
+            <nav aria-label="Navegação principal">
+                <a href="../index.html">Home</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
     </header>
-    <section id="home"><!-- colocar a imagem de fundo, texto alinhado a esquerda, e uma imagem a direita -->
-        <h1>O que é a musicoterapia?</h1>
-        <p>A musicoterapia é uma disciplina clínica, 
-        baseada em evidências científicas e regulamentada, 
-        que utiliza a música e seus elementos — ritmo, melodia, 
-        harmonia e timbre — como recurso terapêutico, 
-        conduzida por um profissional qualificado: o musicoterapeuta. 
-        Segundo a Federação Mundial de Musicoterapia (WFMT), 
-        seu objetivo é promover a comunicação, a expressão emocional, 
-        o desenvolvimento cognitivo, a motricidade e as relações interpessoais, 
-        visando atender necessidades físicas, mentais, 
-        sociais e afetivas de pessoas em qualquer fase da vida. 
-        No Brasil, a União Brasileira das Associações de Musicoterapia (UBAM) 
-        reforça que ela atua na prevenção, tratamento e reabilitação, 
-        favorecendo o potencial humano e a qualidade de vida.</p>
-        <p>Diferente de ouvir música por lazer ou entretenimento, a musicoterapia se desenvolve em um processo estruturado: 
-            começa pela avaliação das necessidades, segue com intervenções personalizadas e termina com o acompanhamento 
-            e reavaliação contínuos. Há duas abordagens principais: a ativa, na qual a pessoa canta, toca instrumentos, 
-            improvisa ou compõe; e a reativa, com escuta guiada para relaxamento, resgate de memórias ou regulação do humor. 
-            Não é necessário ter conhecimento musical para participar 
-            — o foco está na experiência e na relação terapêutica, não na habilidade artística.
-        </p>
-        <p>Cientificamente, sabe-se que a música ativa diversas regiões do cérebro, estimula a liberação 
-            de substâncias como dopamina e serotonina, reduz o cortisol (hormônio do estresse) e favorece a 
-            neuroplasticidade — capacidade do cérebro de se reorganizar e se recuperar. 
-            Por isso, é aplicada em hospitais, escolas, clínicas e instituições, 
-            ajudando no tratamento de transtornos de ansiedade, depressão, condições neurológicas, 
-            dificuldades de comunicação, dor crônica e processos de envelhecimento saudável.
-        </p>
-        <p>Com origens antigas na Grécia, Índia e tradições milenares, a musicoterapia consolidou-se como profissão 
-            formal no século XX, especialmente após a Segunda Guerra Mundial, 
-            e hoje integra equipes multidisciplinares de saúde e educação em todo o mundo.
-            Em resumo, ela transforma a música em uma ponte: entre o que se sente e o que se consegue expressar, 
-            entre limitações e possibilidades, sempre com o propósito de cuidar do ser humano de forma integral.
-        </p>
-        <p>Fontes consultadas: WFMT, UBAM, Wikipédia, Frontiers in Human Neuroscience, PMC – National Library of Medicine
-        </p>
-    <br>
-    </section>
+
+    <main>
+        <section id="hero" class="hero hero_informacional">
+            <img class="hero_imagem" src="../assets/imagens/02_homem_piano.png" alt="Homem tocando piano em um ambiente tranquilo" fetchpriority="high">
+            <div class="hero_conteudo">
+                <span class="eyebrow">Conheça a prática</span>
+                <h1>O que é a musicoterapia?</h1>
+                <p>Uma disciplina clínica que utiliza a música e seus elementos como recursos terapêuticos.</p>
+            </div>
+        </section>
+
+        <article class="secao artigo_informacional">
+            <div class="artigo_intro">
+                <span class="eyebrow">Música, vínculo e cuidado</span>
+                <h2>Uma prática orientada por objetivos</h2>
+                <p class="destaque_texto">A musicoterapia é conduzida por um profissional qualificado e busca atender necessidades físicas, mentais, sociais e afetivas em diferentes fases da vida.</p>
+            </div>
+
+            <div class="artigo_grid">
+                <section>
+                    <h3>Como acontece?</h3>
+                    <p>O processo começa pela avaliação das necessidades, segue com intervenções personalizadas e inclui acompanhamento e reavaliação contínuos. A pessoa pode cantar, tocar instrumentos, improvisar, compor ou participar de uma escuta guiada.</p>
+                </section>
+                <section>
+                    <h3>É preciso saber música?</h3>
+                    <p>Não. O foco está na experiência e na relação terapêutica, não na habilidade artística. As atividades são adaptadas ao perfil, aos interesses e aos objetivos de cada pessoa.</p>
+                </section>
+                <section>
+                    <h3>Onde é aplicada?</h3>
+                    <p>Pode ser encontrada em hospitais, escolas, clínicas e instituições, integrando equipes multidisciplinares de saúde e educação.</p>
+                </section>
+                <section>
+                    <h3>Qual é seu papel?</h3>
+                    <p>A música pode funcionar como uma ponte entre o que se sente e o que se consegue expressar, favorecendo comunicação, vínculo e qualidade de vida.</p>
+                </section>
+            </div>
+
+            <aside class="nota_fontes">
+                <strong>Importante:</strong>
+                <p>Ouvir playlists por conta própria pode apoiar o bem-estar, mas não substitui um processo de musicoterapia conduzido por profissional qualificado.</p>
+                <p><strong>Fontes consultadas no conteúdo original:</strong> WFMT, UBAM, Frontiers in Human Neuroscience e National Library of Medicine.</p>
+            </aside>
+        </article>
+
+        <section class="secao cta_duvidas">
+            <div>
+                <span class="eyebrow">Continue explorando</span>
+                <h2>Encontre uma trilha para o seu momento</h2>
+                <p>Conheça as seleções organizadas por foco, relaxamento, sono e emoções.</p>
+                <a class="botao botao_primario" href="catalogo.html">Ver catálogo <span aria-hidden="true">→</span></a>
+            </div>
+            <img src="../assets/imagens/10_ilustracao_duvidas_musica.png" alt="Balões de conversa sobre música" loading="lazy">
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="rodape_conteudo">
+            <div class="rodape_marca">
+                <a class="marca marca_rodape" href="../index.html">
+                    <img src="../assets/imagens/01_logo_sonora.png" alt="" width="54" height="54" loading="lazy">
+                    <span>Sonora</span>
+                </a>
+                <p>Musicoterapia para acolher emoções, acalmar a mente e transformar o seu dia.</p>
+            </div>
+            <div>
+                <h2>Navegação</h2>
+                <a href="../index.html">Home</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contato.html">Contato</a>
+            </div>
+            <div>
+                <h2>Contato</h2>
+                <a href="mailto:grupopi5turma1g@gmail.com">grupopi5turma1g@gmail.com</a>
+                <p>Projeto Integrador — Grupo 5</p>
+            </div>
+            <img class="logo_ifc" src="../assets/imagens/03_logo_ifc_campus_concordia.png" alt="Instituto Federal Catarinense - Campus Concórdia" loading="lazy">
+        </div>
+        <p class="rodape_base">© 2026 Sonora. Conteúdo educacional.</p>
+    </footer>
 </body>
+
 </html>

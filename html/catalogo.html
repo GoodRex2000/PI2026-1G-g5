@@ -1,97 +1,213 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Playlists Sonora para foco, relaxamento, sono e bem-estar.">
     <title>Sonora - Catálogo</title>
-    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js" defer></script>
 </head>
 
-<body>
-    <header>
-    <div class="barra_de_navegacao">
-        <h1>Sonora</h1> <!-- deixar os botões de navegação no lado direito do título -->
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="html/contato.html">Contato</a>
-            <a href="html/catalogo.html">Catálogo</a>
-            <a href="html/faq.html">FAQ</a>
-        </nav>
-    </div>
-    </header>
-    <main>
-        <section id="hero">
-            <h1>Catálogo de playlists</h1>
-            <h2>Explore músicas organizadas por foco, relaxamento, sono, meditação e bem-estar.</h2>
-            <button><a href="#buscar_playlist">Explorar Agora</a></button>
-            <button><a href="#categorias_em_destaque">Ver categorias</a></button>
-        </section>
-        <div id="buscar_playlist">
-            <h2>Buscar playlist</h2>
-            <button id="estudo"><a>Foco</a></button>
-            <button id="relaxamento"><a>Relaxamento</a></button>
-            <button id="sono"><a>Sono</a></button>
-            <button id="emocoes"><a>Emoções</a></button>
-            <button id="meditacao"><a>Meditação</a></button>
-            <button id="bem-estar"><a>Bem-estar</a></button>
+<body data-page="catalogo">
+    <header class="site_header">
+        <div class="barra_de_navegacao">
+            <a class="marca" href="../index.html" aria-label="Sonora - página inicial">
+                <img src="../assets/imagens/01_logo_sonora.png" alt="" width="52" height="52">
+                <span>Sonora</span>
+            </a>
+            <nav aria-label="Navegação principal">
+                <a href="../index.html">Home</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contato.html">Contato</a>
+            </nav>
         </div>
-        <section class="categorias_em_destaque">
-            <h1>Categorias em destaque</h1>
-            <div>
-                <h2>Foco</h2>
-                <p>Texto</p>
-            </div>
-            <div>
-                <h2>Relaxamento</h2>
-                <p>Texto</p>
-            </div>
-            <div>
-                <h2>Sono</h2>
-                <p>Texto</p>
-            </div>
-            <div>
-                <h2>Emoções</h2>
-                <p>Texto</p>
+    </header>
+
+    <main>
+        <section id="hero" class="hero hero_interno hero_catalogo">
+            <img class="hero_imagem" src="../assets/imagens/19_banner_catalogo.png" alt="Fones de ouvido cercados por elementos naturais e musicais" fetchpriority="high">
+            <div class="hero_conteudo">
+                <span class="eyebrow">Encontre seu ritmo</span>
+                <h1>Catálogo de playlists</h1>
+                <p>Explore músicas organizadas por foco, relaxamento, sono, emoções e bem-estar.</p>
+                <div class="hero_acoes">
+                    <a class="botao botao_primario" href="#playlists">Explorar agora</a>
+                    <a class="botao botao_secundario" href="#categorias">Ver categorias</a>
+                </div>
             </div>
         </section>
-        <section class="playlists_recomendadas">
-            <h1>Playlists recomendadas</h1>
-            <div class="playlist">
-                <h2>Foco profundo</h2>
-                <p></p>
+
+        <section id="buscar_playlist" class="secao filtro_secao" aria-labelledby="titulo_filtros">
+            <div class="cabecalho_secao alinhado_esquerda">
+                <span class="eyebrow">Sua trilha ideal</span>
+                <h2 id="titulo_filtros">Buscar playlist</h2>
             </div>
-            <div class="playlist">
-                <h2>Pausa para respirar</h2>
-                <p></p>
+            <div class="filtros" role="group" aria-label="Filtros de playlists">
+                <button class="filtro ativo" type="button" data-filter="todos" aria-pressed="true">Todas</button>
+                <button class="filtro" type="button" data-filter="foco" aria-pressed="false">Foco</button>
+                <button class="filtro" type="button" data-filter="relaxamento" aria-pressed="false">Relaxamento</button>
+                <button class="filtro" type="button" data-filter="sono" aria-pressed="false">Sono</button>
+                <button class="filtro" type="button" data-filter="emocoes" aria-pressed="false">Emoções</button>
+                <button class="filtro" type="button" data-filter="bem-estar" aria-pressed="false">Bem-estar</button>
             </div>
-            <div class="playlist">
-                <h2>Sono tranquilo</h2>
-                <p></p>
+        </section>
+
+        <section id="categorias" class="secao categorias_em_destaque" aria-labelledby="titulo_categorias">
+            <div class="cabecalho_secao">
+                <span class="eyebrow">Escolha uma intenção</span>
+                <h2 id="titulo_categorias">Categorias em destaque</h2>
+                <p>Clique em uma categoria para ver as playlists relacionadas.</p>
             </div>
-            <div class="playlist">
-                <h2>Calma interior</h2>
-                <p></p>
+            <div class="categorias_grid">
+                <article class="categoria" data-category-target="foco" role="button" tabindex="0">
+                    <img src="../assets/imagens/22_icone_categoria_foco.png" alt="" loading="lazy">
+                    <h3>Foco</h3>
+                    <p>Para estudar, criar e manter a atenção.</p>
+                    <span>Ver playlists <span aria-hidden="true">→</span></span>
+                </article>
+                <article class="categoria" data-category-target="relaxamento" role="button" tabindex="0">
+                    <img src="../assets/imagens/17_icone_categoria_relaxamento.png" alt="" loading="lazy">
+                    <h3>Relaxamento</h3>
+                    <p>Para desacelerar e soltar a tensão.</p>
+                    <span>Ver playlists <span aria-hidden="true">→</span></span>
+                </article>
+                <article class="categoria" data-category-target="sono" role="button" tabindex="0">
+                    <img src="../assets/imagens/13_icone_categoria_sono.png" alt="" loading="lazy">
+                    <h3>Sono</h3>
+                    <p>Para preparar o corpo para uma noite tranquila.</p>
+                    <span>Ver playlists <span aria-hidden="true">→</span></span>
+                </article>
+                <article class="categoria" data-category-target="emocoes" role="button" tabindex="0">
+                    <img src="../assets/imagens/20_icone_categoria_emocoes.png" alt="" loading="lazy">
+                    <h3>Emoções</h3>
+                    <p>Para acolher o que você está sentindo.</p>
+                    <span>Ver playlists <span aria-hidden="true">→</span></span>
+                </article>
             </div>
-            <div class="playlist">
-                <h2>Concentração leve</h2>
-                <p></p>
+        </section>
+
+        <section id="playlists" class="secao playlists_recomendadas" aria-labelledby="titulo_playlists">
+            <div class="playlist_heading">
+                <div class="cabecalho_secao alinhado_esquerda">
+                    <span class="eyebrow">Selecionadas para você</span>
+                    <h2 id="titulo_playlists">Playlists recomendadas</h2>
+                </div>
+                <p id="contador_playlists" class="contador_playlists" aria-live="polite">6 playlists</p>
             </div>
-            <div class="playlist">
-                <h2>Respire e desacerele</h2>
-                <p></p>
+
+            <div class="playlist_grid">
+                <article class="playlist" data-category="foco">
+                    <div class="playlist_capa">
+                        <img src="../assets/imagens/18_playlist_foco_profundo.png" alt="Floresta com névoa" loading="lazy">
+                        <span class="playlist_selo">Foco</span>
+                    </div>
+                    <div class="playlist_conteudo">
+                        <h3>Foco profundo</h3>
+                        <p>Sons atmosféricos para reduzir distrações e entrar no fluxo.</p>
+                        <a class="playlist_link" href="https://open.spotify.com/playlist/23UVsIjFWxOr5evud05LsV?si=DRvECoLkRDSpXNb29618Ow&amp;utm_source=copy-link&amp;sci=spotify%3Acard-config%3A714tPShHwUgV3ZNGlrmg7F" target="_blank" rel="noopener noreferrer">
+                            <span class="spotify_ponto" aria-hidden="true"></span> Ouvir no Spotify <span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="playlist" data-category="relaxamento bem-estar">
+                    <div class="playlist_capa">
+                        <img src="../assets/imagens/16_playlist_pausa_para_respirar.png" alt="Lago entre montanhas ao pôr do sol" loading="lazy">
+                        <span class="playlist_selo">Relaxamento</span>
+                    </div>
+                    <div class="playlist_conteudo">
+                        <h3>Pausa para respirar</h3>
+                        <p>Uma pausa sonora para respirar fundo e desacelerar.</p>
+                        <a class="playlist_link" href="https://open.spotify.com/playlist/5gHkW2g4Sw2ddCftexWjMF?si=FV67OmBvQ-aQYTxDne1ctw&amp;utm_source=copy-link&amp;pi=uOhwJbQiTpSfO&amp;sci=spotify%3Acard-config%3A6wWgmBM32fXsZFERScV1lC" target="_blank" rel="noopener noreferrer">
+                            <span class="spotify_ponto" aria-hidden="true"></span> Ouvir no Spotify <span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="playlist" data-category="sono">
+                    <div class="playlist_capa">
+                        <img src="../assets/imagens/14_playlist_sono_tranquilo.png" alt="Lua crescente em um céu estrelado" loading="lazy">
+                        <span class="playlist_selo">Sono</span>
+                    </div>
+                    <div class="playlist_conteudo">
+                        <h3>Sono tranquilo</h3>
+                        <p>Clima noturno e sereno para preparar o corpo para descansar.</p>
+                        <span class="playlist_link playlist_indisponivel">Playlist em breve</span>
+                    </div>
+                </article>
+
+                <article class="playlist" data-category="emocoes bem-estar">
+                    <div class="playlist_capa">
+                        <img src="../assets/imagens/12_playlist_calma_interior.png" alt="Pedras equilibradas em um jardim de areia" loading="lazy">
+                        <span class="playlist_selo">Emoções</span>
+                    </div>
+                    <div class="playlist_conteudo">
+                        <h3>Calma interior</h3>
+                        <p>Melodias suaves para acolher emoções e renovar o ânimo.</p>
+                        <a class="playlist_link" href="https://open.spotify.com/playlist/3wj5mu2ylnT683zHSYBS7J?si=AoGZ8qqHQca6exE9H6Yx8g&amp;utm_source=copy-link&amp;sci=spotify%3Acard-config%3A5LK057PaZWVphtwTM2fLuG" target="_blank" rel="noopener noreferrer">
+                            <span class="spotify_ponto" aria-hidden="true"></span> Ouvir no Spotify <span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="playlist" data-category="foco bem-estar">
+                    <div class="playlist_capa">
+                        <img src="../assets/imagens/15_playlist_concentracao_leve.png" alt="Folhas verdes iluminadas pelo sol" loading="lazy">
+                        <span class="playlist_selo">Concentração</span>
+                    </div>
+                    <div class="playlist_conteudo">
+                        <h3>Concentração leve</h3>
+                        <p>Uma seleção tranquila para leituras, revisões e estudos.</p>
+                        <a class="playlist_link" href="https://open.spotify.com/playlist/5fJlRSQ2MmHmYZXViXvnj1?si=wAdAkNuhQnWprOMJYPFOdA&amp;utm_source=copy-link&amp;pi=FKIsAo7YR22qp&amp;sci=spotify%3Acard-config%3A44oUm87aWc1DoenfF6XD7n" target="_blank" rel="noopener noreferrer">
+                            <span class="spotify_ponto" aria-hidden="true"></span> Ouvir no Spotify <span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="playlist" data-category="relaxamento emocoes">
+                    <div class="playlist_capa">
+                        <img src="../assets/imagens/21_playlist_respire_e_desacelere.png" alt="Flores de lavanda" loading="lazy">
+                        <span class="playlist_selo">Respiração</span>
+                    </div>
+                    <div class="playlist_conteudo">
+                        <h3>Respire e desacelere</h3>
+                        <p>Sons calmos para criar um momento de presença e tranquilidade.</p>
+                        <span class="playlist_link playlist_indisponivel">Playlist em breve</span>
+                    </div>
+                </article>
             </div>
+            <p id="playlist_vazia" class="playlist_vazia" hidden>Nenhuma playlist disponível nessa categoria por enquanto.</p>
         </section>
     </main>
-<footer class="rodape">
-    <div id="sonora_rodape">
-        <h2>Sonora</h2>
-        <p>Musicoterapia para acolher emoções, acalmar a mente e transformar o seu dia.</p>
-    </div>
-    <div id="contato">
-        <h2>Contato</h2>
-        <p>Email: grupopi5turma1g@gmail.com</p>
-    </div>
-</footer>
+
+    <footer class="rodape">
+        <div class="rodape_conteudo">
+            <div class="rodape_marca">
+                <a class="marca marca_rodape" href="../index.html">
+                    <img src="../assets/imagens/01_logo_sonora.png" alt="" width="54" height="54" loading="lazy">
+                    <span>Sonora</span>
+                </a>
+                <p>Musicoterapia para acolher emoções, acalmar a mente e transformar o seu dia.</p>
+            </div>
+            <div>
+                <h2>Navegação</h2>
+                <a href="../index.html">Home</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contato.html">Contato</a>
+            </div>
+            <div>
+                <h2>Contato</h2>
+                <a href="mailto:grupopi5turma1g@gmail.com">grupopi5turma1g@gmail.com</a>
+                <p>Projeto Integrador — Grupo 5</p>
+            </div>
+            <img class="logo_ifc" src="../assets/imagens/03_logo_ifc_campus_concordia.png" alt="Instituto Federal Catarinense - Campus Concórdia" loading="lazy">
+        </div>
+        <p class="rodape_base">© 2026 Sonora. Conteúdo educacional.</p>
+    </footer>
 </body>
+
 </html>
