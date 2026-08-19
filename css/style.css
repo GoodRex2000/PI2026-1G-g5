@@ -201,6 +201,35 @@ nav a {
 }
 
 
+/* ============ ANIMAÇÃO DE CLIQUE (RIPPLE) ============ */
+
+button,
+.botao,
+.playlist_link,
+.filtro,
+.pergunta_botao {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: currentColor;
+    opacity: 0.35;
+    transform: translate(-50%, -50%) scale(0);
+    pointer-events: none;
+    animation: onda_espalhar 600ms ease-out forwards;
+}
+
+@keyframes onda_espalhar {
+    to {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
+}
+
+
 /* ============ HERO (BANNER DO TOPO DAS PÁGINAS) ============ */
 
 .hero {
