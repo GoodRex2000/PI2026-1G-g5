@@ -1069,8 +1069,9 @@ main > article {
 }
 
 .logo_ifc {
-    width: 86px;
-    height: 100px;
+    width: 108px;
+    height: auto;
+    max-width: 100%;
     align-self: start;
     justify-self: end;
     object-fit: contain;
