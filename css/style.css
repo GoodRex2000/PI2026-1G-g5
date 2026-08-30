@@ -229,11 +229,13 @@ main > article {
 
 .hero {
     position: relative;
+    width: 100%;
     min-height: 570px;
     overflow: hidden;
-    margin-top: 28px;
-    border: 1px solid var(--borda);
-    border-radius: var(--raio-grande);
+    margin-top: 0;
+    border-block: 1px solid var(--borda);
+    border-inline: 0;
+    border-radius: 0;
     background: var(--azul-fundo);
     box-shadow: var(--sombra);
     isolation: isolate;
@@ -264,6 +266,7 @@ main > article {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    margin-left: max(0px, calc((100% - var(--largura)) / 2));
     padding: clamp(38px, 6vw, 72px);
 }
 
@@ -281,6 +284,17 @@ main > article {
     display: block;
     margin-bottom: 5px;
     color: var(--texto);
+}
+
+@media (min-width: 781px) {
+    .hero_home .hero_conteudo {
+        width: min(60%, 720px);
+        padding: 48px 56px;
+    }
+
+    .hero_home .hero_conteudo h1 {
+        font-size: clamp(3.05rem, 4vw, 3.85rem);
+    }
 }
 
 .hero_acoes {
