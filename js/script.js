@@ -14,13 +14,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function marcarPaginaAtual() {
         const paginaAtual = obterNomeDaPagina(window.location.pathname);
+        let linkAtual = null;
 
         document.querySelectorAll("nav a").forEach((link) => {
             const destino = new URL(link.href, window.location.href);
 
             if (obterNomeDaPagina(destino.pathname) === paginaAtual) {
                 link.setAttribute("aria-current", "page");
+                linkAtual = link;
             }
+        });
+
+        if (!linkAtual) {
+            return;
+        }
+
+        window.requestAnimationFrame(() => {
+            const navegacao = linkAtual.closest("nav");
+            const deslocamento = linkAtual.offsetLeft - ((navegacao.clientWidth - linkAtual.offsetWidth) / 2);
+
+            navegacao.scrollLeft = Math.max(0, deslocamento);
         });
     }
 
@@ -69,6 +82,10 @@ document.addEventListener("DOMContentLoaded", () => {
             ".artigo_intro",
             ".artigo_grid > section",
             ".nota_fontes",
+            ".quiz_intro_texto",
+            ".quiz_visual",
+            ".quiz_cabecalho",
+            ".quiz_painel",
             ".cta_duvidas > *",
             ".cta_suporte > *",
             ".rodape_conteudo > *"
