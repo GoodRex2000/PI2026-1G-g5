@@ -1,4 +1,4 @@
-:root {
+:root { 
     --azul-fundo: #eef7fb;
     --azul-claro: #dfeff7;
     --azul: #69aee6;
@@ -17,7 +17,7 @@
     --raio-grande: 34px;
     --largura: 1180px;
 }
-
+#cores acima, não esquecer!
 *,
 *::before,
 *::after {
