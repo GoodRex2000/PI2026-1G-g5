@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
     prepararFaq();
     prepararFormulario();
     prepararOndasDeClique();
-#funcoes
     
     function marcarPaginaAtual() {
         const paginaAtual = obterNomeDaPagina(window.location.pathname);
@@ -66,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         atualizar();
     }
-#"dicionario'.do.que.vai.movimentar
+
     function prepararAnimacoesDeEntrada() {
         const seletores = [
             ".hero_conteudo > *",
@@ -120,7 +119,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         elementos.forEach((elemento) => observador.observe(elemento));
     }
-#movimentacao.dos.card
     
     function prepararRealceDosCards() {
         const cards = document.querySelectorAll(".playlist, .beneficio, .funcionamento, .categoria");
@@ -152,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
-#filtros
+
     function prepararFiltros() {
         const filtros = [...document.querySelectorAll("[data-filter]")];
         const playlists = [...document.querySelectorAll(".playlist[data-category]")];
@@ -168,7 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const aplicarFiltro = (filtro) => {
             let totalVisivel = 0;
 
-#botoes
+
             
             filtros.forEach((botao) => {
                 const selecionado = botao.dataset.filter === filtro;
@@ -213,7 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 avisoVazio.hidden = totalVisivel !== 0;
             }
         };
-#botao3
+
         filtros.forEach((botao) => {
             botao.addEventListener("click", () => aplicarFiltro(botao.dataset.filter));
         });
@@ -236,7 +234,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
-#faq
+
     function prepararFaq() {
         const botoes = document.querySelectorAll(".pergunta_botao");
 
@@ -255,7 +253,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
-#formulario
+
     function prepararFormulario() {
         const formulario = document.querySelector("#formulario_contato");
 
