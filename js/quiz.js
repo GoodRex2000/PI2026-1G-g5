@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    // Troque os endereços abaixo para atualizar as playlists recomendadas.
     const PLAYLISTS = {
         relaxamento: "https://open.spotify.com/playlist/5gHkW2g4Sw2ddCftexWjMF",
         foco: "https://open.spotify.com/playlist/23UVsIjFWxOr5evud05LsV",
