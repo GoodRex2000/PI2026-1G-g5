@@ -1032,6 +1032,20 @@ main > article {
     min-height: 630px;
 }
 
+.quiz_intro_imagem {
+    display: grid;
+    min-width: 0;
+    place-items: center;
+}
+
+.quiz_intro_imagem img {
+    width: 100%;
+    max-width: 440px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 32px rgba(68, 105, 129, 0.16));
+}
+
 .quiz_intro_texto h1 {
     max-width: 720px;
     margin-bottom: 22px;
@@ -1111,41 +1125,6 @@ main > article {
 .quiz_visual::after {
     width: 455px;
     height: 455px;
-}
-
-.quiz_disco {
-    position: relative;
-    display: grid;
-    width: min(58%, 285px);
-    aspect-ratio: 1;
-    place-items: center;
-    border: 9px solid rgba(255, 255, 255, 0.72);
-    border-radius: 50%;
-    background:
-        radial-gradient(circle, #d6d0f8 0 7%, #fff 7.5% 10%, transparent 10.5%),
-        repeating-radial-gradient(circle, #345264 0 4px, #263f50 5px 8px, #3d6073 9px 11px);
-    box-shadow: 0 25px 50px rgba(50, 73, 101, 0.23);
-    animation: quizDiscoFlutua 5s ease-in-out infinite;
-}
-
-.quiz_disco::before {
-    position: absolute;
-    width: 39%;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--turquesa), var(--lilas));
-    box-shadow: inset 0 0 0 6px rgba(255, 255, 255, 0.24);
-    content: "";
-}
-
-.quiz_disco_centro {
-    position: relative;
-    z-index: 1;
-    width: 19px;
-    height: 19px;
-    border: 5px solid #fff;
-    border-radius: 50%;
-    background: var(--texto);
 }
 
 .quiz_nota {
@@ -1281,7 +1260,7 @@ main > article {
     width: 14%;
     height: 100%;
     border-radius: inherit;
-    background: linear-gradient(90deg, var(--turquesa), var(--lilas));
+    background: var(--turquesa);
     box-shadow: 0 0 16px rgba(84, 200, 195, 0.34);
     transition: width 360ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
